@@ -1,11 +1,11 @@
 const palindromes = function (str) {
-    const new = str
+    const arr = str
         .replace(/[^a-z]/gi, "")
         .toLowerCase();
 
-    const l = new.length;
+    const l = arr.length;
     for (let i = 0; i < l/2; i++) {
-        if (new.charAt(i) !== new.charAt(l-1-i)) {
+        if (arr[i] !== arr[l-1-i]) {
             return false;
         }
     }
